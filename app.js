@@ -221,7 +221,7 @@ const activities = [
     actionText: "סיימתי את הסולו"
   },
 
-  // --- חדש: בדיחות קרש מטופשות ---
+  // --- בדיחות קרש מטופשות ---
   {
     category: "בדיחת קרש",
     title: "למה עכבר חוצה את הכביש?",
@@ -251,11 +251,11 @@ const activities = [
     actionText: "הבנתי, די"
   },
 
-  // --- חדש: חידות קשות ומטופשות ---
+  // --- חידות קשות ומטופשות ---
   {
     category: "חידה מטופשת",
     title: "חידת השעון המסתורי",
-    desc: "מה עושה שעון שעצר מלכת? צודק לגmרי פעמיים ביום! אבל מה הוא עושה בשאר הזמן? מתבטל כמוך.",
+    desc: "מה עושה שעון שעצר מלכת? צודק לגמרי פעמיים ביום! אבל מה הוא עושה בשאר הזמן? מתבטל כמוך.",
     type: "riddle",
     actionText: "הבנתי את הפאנץ'"
   },
@@ -277,26 +277,29 @@ const activities = [
 
 // Fun Fortunes
 const fortunes = [
-  "הגרב שלך תמצא את בן הזוג שלה במכונת הכביסה בדיוק בעוד 3 חודשים.",
-  "צפויה לך הצלחה מסחררת בהסתכלות על התקרה בשעה הקרובה.",
-  "מישהו יגיד לך 'מה נשמע' ואתה תענה 'גם לך' (זה יקרה היום).",
-  "הקפה הבא שלך הולך להיות בדיוק בטמפרטורה המושלמת (בערך).",
-  "אם תסתכל שמאלה עכשיו תראה... אה, בעצם זה רק קיר.",
-  "החתול השכונתי חושב שאתה בנאדם די מגניב בסך הכל.",
-  "בקרוב מאוד תמצא מטבע של עשרה אגורות במקום שלא ציפית לו בכלל.",
-  "המחשב שלך מעריך את זה שאתה נותן לו לנוח מדי פעם."
+  "הגרב שלך תמצא את בן הזוג שלה במכונת הכביסה בדיוק בעוד 3 חודשים. 🧦✨",
+  "צפויה לך הצלחה מסחררת בהסתכלות על התקרה בשעה הקרובה. 🙃",
+  "מישהו יגיד לך 'מה נשמע' ואתה תענה 'גם לך' (זה יקרה היום). 💀",
+  "הקפה הבא שלך הולך להיות בדיוק בטמפרטורה המושלמת (בערך). ☕🔥",
+  "אם תסתכל שמאלה עכשיו תראה... אה, בעצם זה רק קיר. 🧱",
+  "החתול השכונתי חושב שאתה בנאדם די מגניב בסך הכל. 🐱👑",
+  "בקרוב מאוד תמצא מטבע של עשרה אגורות במקום שלא ציפית לו בכלל. 🪙",
+  "המחשב שלך מעריך את זה שאתה נותן לו לנוח מדי פעם. 💻💤"
 ];
 
 // Fun Excuses
 const excuses = [
-  "אני חייב להאכיל את האקווריום שלי בדגים וירטואליים.",
-  "הכוכבים לא מסודרים נכון בשביל שאעשה מטלות כרגע.",
-  "המוח שלי נמצא במצב חיסכון בסוללה עד מחר בבוקר.",
-  "הבטחתי לצמח שלי בסלון שששש... אנחנו במדיטציה.",
-  "אני באמצע לספור את כל הפעימות לב שלי עד שייגמר היום.",
-  "החתול שלי חסם לי את הדרך עם הגוף שלו ואני בן ערובה.",
-  "המקלדת שלי ביקשה חופשת מחלה פתאומית."
+  "אני חייב להאכיל את האקווריום שלי בדגים וירטואליים. 🐠",
+  "הכוכבים לא מסודרים נכון בשביל שאעשה מטלות כרגע. ✨",
+  "המוח שלי נמצא במצב חיסכון בסוללה עד מחר בבוקר. 🔋",
+  "הבטחתי לצמח שלי בסלון שששש... אנחנו במדיטציה. 🌱",
+  "אני באמצע לספור את כל הפעימות לב שלי עד שייגמר היום. 💓",
+  "החתול שלי חסם לי את הדרך עם הגוף שלו ואני בן ערובה. 🐾",
+  "המקלדת שלי ביקשה חופשת מחלה פתאומית. ⌨️🤒"
 ];
+
+// Stupid Emojis to float in background
+const stupidEmojis = ["🤪", "🤡", "💩", "🦄", "🍌", "💥", "👻", "🌮", "🐸", "🧌", "🤖", "🥴", "🍕", "🥳", "💫", "🦩"];
 
 // App State
 let currentActivity = null;
@@ -314,6 +317,7 @@ const mainActionBtn = document.getElementById('mainActionBtn');
 const nextBtn = document.getElementById('nextBtn');
 const completedCountEl = document.getElementById('completedCount');
 const boredLevelEl = document.getElementById('boredLevel');
+const emojiPartyBtn = document.getElementById('emojiPartyBtn');
 
 // Initialize App
 function init() {
@@ -321,6 +325,51 @@ function init() {
   
   mainActionBtn.addEventListener('click', handleMainAction);
   nextBtn.addEventListener('click', loadRandomActivity);
+  emojiPartyBtn.addEventListener('click', triggerEmojiChaos);
+
+  // Periodic random floating stupid emoji
+  setInterval(() => {
+    spawnFloatingEmoji();
+  }, 2500);
+}
+
+// Spawn random floating emoji across screen
+function spawnFloatingEmoji(emojiOverride) {
+  const container = document.getElementById('floatingEmojisContainer');
+  if (!container) return;
+
+  const el = document.createElement('div');
+  el.className = 'floating-stupid-emoji';
+  el.textContent = emojiOverride || stupidEmojis[Math.floor(Math.random() * stupidEmojis.length)];
+  
+  const startX = Math.random() * window.innerWidth;
+  el.style.left = `${startX}px`;
+  el.style.bottom = `-50px`;
+  
+  const duration = 3 + Math.random() * 3;
+  const rot = (Math.random() - 0.5) * 360;
+  el.style.animation = `floatUpStupid ${duration}s linear forwards`;
+  el.style.setProperty('--rot', `${rot}deg`);
+
+  container.appendChild(el);
+
+  setTimeout(() => {
+    el.remove();
+  }, duration * 1000);
+}
+
+// Emoji Chaos Party Button!
+function triggerEmojiChaos() {
+  for (let i = 0; i < 35; i++) {
+    setTimeout(() => {
+      spawnFloatingEmoji();
+    }, i * 60);
+  }
+  
+  // Shake main card
+  const card = document.querySelector('.activity-card');
+  card.classList.add('card-shake');
+  setTimeout(() => card.classList.remove('card-shake'), 500);
 }
 
 // Load a random activity
@@ -346,6 +395,10 @@ function loadRandomActivity() {
   card.style.animation = 'none';
   card.offsetHeight; // trigger reflow
   card.style.animation = 'fadeIn 0.4s ease';
+
+  // Spawn a couple emojis on switch
+  spawnFloatingEmoji();
+  spawnFloatingEmoji();
 }
 
 // Render interactive widgets based on activity type
@@ -357,12 +410,13 @@ function renderInteractiveComponent(type) {
       let count = 0;
       const btn = document.createElement('button');
       btn.className = 'clicker-btn';
-      btn.textContent = count;
+      btn.innerHTML = `${count} 🤪`;
       btn.onclick = () => {
         count++;
-        btn.textContent = count;
+        btn.innerHTML = `${count} 💥`;
+        spawnFloatingEmoji("🔥");
         if(count === 15) {
-          triggerSuccess("וואו, לחצת 15 פעם! השעמום שלך מתפורר.");
+          triggerSuccess("וואו, לחצת 15 פעם! השעמום שלך מתפורר לגמרי! 🥳");
         }
       };
       interactiveArea.appendChild(btn);
@@ -378,7 +432,9 @@ function renderInteractiveComponent(type) {
         bubble.onclick = () => {
           if(!bubble.classList.contains('popped')) {
             bubble.classList.add('popped');
-            bubble.innerHTML = '💥';
+            const popEmojis = ['💥', '🤪', '🎈', '⭐', '✨'];
+            bubble.innerHTML = popEmojis[Math.floor(Math.random() * popEmojis.length)];
+            spawnFloatingEmoji("💨");
             checkAllBubblesPopped(grid);
           }
         };
@@ -390,14 +446,14 @@ function renderInteractiveComponent(type) {
     case 'fortune':
       const fDiv = document.createElement('div');
       fDiv.className = 'fortune-text';
-      fDiv.textContent = "לחץ על הכפתור למטה כדי לחשוף את הנבואה שלך...";
+      fDiv.textContent = "🔮 לחץ על הכפתור למטה כדי לחשוף את הנבואה המטופשת שלך...";
       interactiveArea.appendChild(fDiv);
       break;
 
     case 'excuse':
       const eDiv = document.createElement('div');
       eDiv.className = 'excuse-box';
-      eDiv.textContent = "«המחשב שלי התחיל לבכות אז אני חייב לנחם אותו»";
+      eDiv.textContent = "«המחשב שלי התחיל לבכות אז אני חייב לנחם אותו עם פיצה וירטואלית» 🍕🤡";
       interactiveArea.appendChild(eDiv);
       break;
 
@@ -409,7 +465,8 @@ function renderInteractiveComponent(type) {
       sDiv.onclick = () => {
         staring = !staring;
         sDiv.style.transform = staring ? 'scale(1.5) rotate(15deg)' : 'scale(1)';
-        sDiv.textContent = staring ? '😳' : '👀';
+        sDiv.textContent = staring ? '🤪' : '👀';
+        spawnFloatingEmoji("🥴");
       };
       interactiveArea.appendChild(sDiv);
       break;
@@ -418,7 +475,7 @@ function renderInteractiveComponent(type) {
     case 'riddle':
       const jDiv = document.createElement('div');
       jDiv.className = 'joke-box';
-      jDiv.innerHTML = '<i class="fa-solid fa-face-laugh" style="color:var(--accent); font-size: 1.8rem; margin-bottom: 8px;"></i><br>מוכן לפאנץ\'? לחץ על הכפתור למטה!';
+      jDiv.innerHTML = '<i class="fa-solid fa-face-laugh" style="color:var(--accent); font-size: 1.8rem; margin-bottom: 8px;"></i><br>🤡 מוכן לפאנץ\' הכי גרוע בעולם? לחץ למטה!';
       interactiveArea.appendChild(jDiv);
       break;
 
@@ -426,7 +483,7 @@ function renderInteractiveComponent(type) {
       const defaultText = document.createElement('div');
       defaultText.style.color = 'var(--text-muted)';
       defaultText.style.textAlign = 'center';
-      defaultText.innerHTML = '<i class="fa-solid fa-face-laugh-squint fa-2x" style="margin-bottom:10px; color:var(--accent);"></i><br>תעשה את זה עכשיו ואל תתחכם!';
+      defaultText.innerHTML = '<i class="fa-solid fa-face-laugh-squint fa-2x" style="margin-bottom:10px; color:var(--accent);"></i><br>🤪 תעשה את זה עכשיו ואל תתחכם בכלל!';
       interactiveArea.appendChild(defaultText);
       break;
   }
@@ -436,7 +493,7 @@ function renderInteractiveComponent(type) {
 function checkAllBubblesPopped(grid) {
   const remaining = grid.querySelectorAll('.bubble:not(.popped)').length;
   if(remaining === 0) {
-    triggerSuccess("פצפצת הכל! השעמום שלך ירד ב-15%.");
+    triggerSuccess("פצפצת הכל! השעמום שלך התפוגג בענן של קונפטי! 🎉");
   }
 }
 
@@ -446,6 +503,7 @@ function handleMainAction() {
   stats.boredLevel = Math.max(0, stats.boredLevel - 10);
   
   updateStatsDisplay();
+  spawnFloatingEmoji("✨");
 
   // Special interactive responses
   if(currentActivity.type === 'fortune') {
@@ -462,10 +520,10 @@ function handleMainAction() {
 
   if(currentActivity.type === 'joke' || currentActivity.type === 'riddle') {
     const punchlines = [
-      "ועכשיו תצחק בקול רם כדי שהשכנים יחשבו שהשתגעת סופית!",
-      "גאוני, נכון? עכשיו תן לזה לייק דמיוני בראש.",
-      "אם לא צחקת, הבדיחה חייבת לך פיצוי כספי.",
-      "רמת ההומור שלך עלתה ב-3% לפחות."
+      "ועכשיו תצחק בקול רם כמו ליצן מטומטם כדי שהשכנים יזמינו משטרה! 🤡🚨",
+      "גאוני, נכון? עכשיו תן לזה לייק דמיוני בתוך האוזן שלך. 🦄",
+      "אם לא צחקת, הבדיחה חייבת לך פיצוי בדמות בננה דחופה. 🍌",
+      "רמת ההומור שלך עלתה ב-3% לפחות וזה ממש נס רפואי. 🤪"
     ];
     const randomP = punchlines[Math.floor(Math.random() * punchlines.length)];
     interactiveArea.querySelector('.joke-box').innerHTML = `<i class="fa-solid fa-face-grin-squint-tears" style="color:var(--primary); font-size: 1.8rem; margin-bottom: 8px;"></i><br>${randomP}`;
@@ -481,6 +539,11 @@ function triggerSuccess(msg) {
   stats.boredLevel = Math.max(0, stats.boredLevel - 20);
   updateStatsDisplay();
   
+  // Trigger mini emoji rain
+  for(let i=0; i<10; i++) {
+    setTimeout(() => spawnFloatingEmoji(), i * 80);
+  }
+
   const originalTitle = activityTitle.textContent;
   activityTitle.textContent = `🎉 ${msg}`;
   setTimeout(() => {

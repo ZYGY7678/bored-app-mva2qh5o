@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>משעמם לך? תתרפא מזה מיד!</title>
+  <title>משעמם לך? תתרפא מזה מיד עם טירוף אימוגים!</title>
   
   <!-- Favicon & PWA Manifest -->
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -21,21 +21,33 @@
 </head>
 <body>
 
+  <!-- Floating Stupid Emojis Container -->
+  <div class="floating-emojis-container" id="floatingEmojisContainer"></div>
+
   <div class="container">
-    <!-- Header with Giant Bored Sign -->
+    <!-- Header with Giant Bored Sign & Emoji Party Trigger -->
     <header>
-      <h1 class="bored-sign">משעמם לך?</h1>
-      <p class="subtitle">הגעת למקום היחיד באינטרנט שיציל אותך משיעמום קטלני!</p>
+      <div class="header-top-row">
+        <span class="header-emoji-bounce">🤪</span>
+        <h1 class="bored-sign">משעמם לך?</h1>
+        <span class="header-emoji-bounce">🤡</span>
+      </div>
+      <p class="subtitle">הגעת למקום הכי הזוי באינטרנט שיציל אותך משיעמום קטלני!</p>
+      
+      <button class="emoji-party-btn" id="emojiPartyBtn">
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+        <span>הפעל מסיבת אימוגים מטומטמת! 🎉</span>
+      </button>
     </header>
 
     <!-- Stats Bar -->
     <div class="stats-bar">
       <div class="stat-item">
-        <i class="fa-solid fa-face-grimace" style="color: var(--accent);"></i>
+        <span class="stat-emoji-spin">🥴</span>
         <span>רמת שעמום: <strong id="boredLevel">100%</strong></span>
       </div>
       <div class="stat-item">
-        <i class="fa-solid fa-trophy" style="color: var(--primary);"></i>
+        <span class="stat-emoji-spin">🏆</span>
         <span>משימות שבוצעו: <strong id="completedCount">0</strong></span>
       </div>
     </div>
@@ -55,7 +67,7 @@
       <div class="btn-group">
         <button class="btn btn-secondary" id="nextBtn">
           <i class="fa-solid fa-shuffle"></i>
-          <span>תביא משהו אחר</span>
+          <span>תביא משהו אחר 🍌</span>
         </button>
         <button class="btn btn-primary" id="mainActionBtn">
           <span>עשיתי את זה!</span>

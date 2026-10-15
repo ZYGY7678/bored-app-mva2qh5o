@@ -29,6 +29,44 @@ body {
   align-items: center;
   overflow-x: hidden;
   padding: 20px;
+  position: relative;
+}
+
+/* Floating Emojis Background Layer */
+.floating-emojis-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.floating-stupid-emoji {
+  position: absolute;
+  font-size: 2.2rem;
+  user-select: none;
+  opacity: 0.75;
+  filter: drop-shadow(0 0 6px rgba(255,255,255,0.3));
+}
+
+@keyframes floatUpStupid {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(0.8);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.9;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(-110vh) rotate(var(--rot)) scale(1.4);
+    opacity: 0;
+  }
 }
 
 .container {
@@ -39,24 +77,40 @@ body {
   align-items: center;
   gap: 24px;
   margin-bottom: 40px;
+  z-index: 2;
 }
 
 /* Header & Bored Banner */
 header {
   text-align: center;
-  margin-top: 20px;
-  animation: floatBanner 3s ease-in-out infinite;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-top-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-emoji-bounce {
+  font-size: 3rem;
+  display: inline-block;
+  animation: bounceEmoji 1.5s ease-in-out infinite alternate;
 }
 
 .bored-sign {
-  background: linear-gradient(135deg, #FF5722, #FF9800, #FFC107);
-  background-size: 200% 200%;
-  animation: gradientBG 5s ease infinite;
+  background: linear-gradient(135deg, #FF5722, #FF9800, #FFC107, #E91E63, #9C27B0);
+  background-size: 300% 300%;
+  animation: gradientBG 6s ease infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: clamp(3rem, 10vw, 5.5rem);
   font-weight: 900;
-  text-shadow: 0 5px 15px rgba(255, 87, 34, 0.3);
+  text-shadow: 0 5px 25px rgba(255, 87, 34, 0.4);
   line-height: 1.1;
   letter-spacing: -1px;
 }
@@ -64,25 +118,59 @@ header {
 .subtitle {
   color: var(--text-muted);
   font-size: 1.1rem;
-  margin-top: 8px;
+}
+
+/* Emoji Party Button */
+.emoji-party-btn {
+  background: linear-gradient(135deg, #9C27B0, #E91E63, #FF5722);
+  background-size: 200% 200%;
+  animation: gradientBG 4s ease infinite;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-family: 'Rubik', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(156, 39, 176, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.emoji-party-btn:hover {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0 8px 25px rgba(233, 30, 99, 0.6);
+}
+
+.emoji-party-btn:active {
+  transform: scale(0.95);
 }
 
 /* Stats bar */
 .stats-bar {
   display: flex;
-  gap: 15px;
+  gap: 20px;
   background: var(--card-bg);
-  padding: 10px 20px;
+  padding: 12px 24px;
   border-radius: 50px;
-  font-size: 0.9rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  border: 1px solid rgba(255,255,255,0.05);
+  font-size: 0.95rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
 .stat-item {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
+}
+
+.stat-emoji-spin {
+  display: inline-block;
+  animation: spinSlow 4s linear infinite;
 }
 
 /* Main Activity Card */
@@ -92,7 +180,7 @@ header {
   border-radius: var(--radius);
   padding: 30px;
   box-shadow: var(--shadow);
-  border: 2px solid rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.08);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -104,6 +192,10 @@ header {
 
 .activity-card:hover {
   transform: translateY(-4px);
+}
+
+.card-shake {
+  animation: cardShakeAnim 0.4s ease-in-out;
 }
 
 .activity-badge {
@@ -144,7 +236,7 @@ header {
   margin-bottom: 25px;
   padding: 15px;
   position: relative;
-  border: 1px dashed rgba(255,255,255,0.1);
+  border: 1px dashed rgba(255,255,255,0.15);
 }
 
 /* Action Buttons */
@@ -198,28 +290,30 @@ header {
 
 /* Mini Games & Interactive Styles */
 .clicker-btn {
-  width: 100px;
-  height: 100px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   background: radial-gradient(circle, #FFC107, #FF5722);
   border: none;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 0 20px rgba(255, 193, 7, 0.5);
+  box-shadow: 0 0 25px rgba(255, 193, 7, 0.6);
   transition: transform 0.1s;
+  animation: pulseClicker 2s infinite ease-in-out;
 }
 
 .clicker-btn:active {
-  transform: scale(0.9);
+  transform: scale(0.85) rotate(-10deg);
 }
 
 .stare-box {
-  font-size: 3rem;
+  font-size: 3.5rem;
   cursor: pointer;
   user-select: none;
   transition: transform 0.3s;
+  animation: wiggleStare 2s infinite ease-in-out;
 }
 
 .bubble-wrap {
@@ -234,13 +328,18 @@ header {
   aspect-ratio: 1;
   background: rgba(255,255,255,0.1);
   border-radius: 50%;
-  border: 2px solid rgba(255,255,255,0.2);
+  border: 2px solid rgba(255,255,255,0.25);
   cursor: pointer;
   transition: all 0.2s;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+}
+
+.bubble:hover {
+  background: rgba(255, 193, 7, 0.2);
+  transform: scale(1.1);
 }
 
 .bubble.popped {
@@ -283,9 +382,33 @@ header {
   100% { background-position: 0% 50%; }
 }
 
-@keyframes floatBanner {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
+@keyframes bounceEmoji {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-8px) rotate(10deg); }
+}
+
+@keyframes spinSlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulseClicker {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.06); box-shadow: 0 0 35px rgba(255, 87, 34, 0.8); }
+}
+
+@keyframes wiggleStare {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-8deg); }
+  75% { transform: rotate(8deg); }
+}
+
+@keyframes cardShakeAnim {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-10px) rotate(-2deg); }
+  40% { transform: translateX(10px) rotate(2deg); }
+  60% { transform: translateX(-6px) rotate(-1deg); }
+  80% { transform: translateX(6px) rotate(1deg); }
 }
 
 @keyframes fadeIn {
@@ -303,5 +426,8 @@ header {
   }
   .activity-title {
     font-size: 1.5rem;
+  }
+  .header-top-row {
+    gap: 8px;
   }
 }
