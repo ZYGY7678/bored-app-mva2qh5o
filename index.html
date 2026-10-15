@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>משעמם לך? תתרפא מזה מיד עם טירוף אימוגים!</title>
+  <title>משעמם לך? תתרפא מזה מיד עם טירוף אימוגים וטימטום אינסופי!</title>
   
   <!-- Favicon & PWA Manifest -->
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -28,16 +28,24 @@
     <!-- Header with Giant Bored Sign & Emoji Party Trigger -->
     <header>
       <div class="header-top-row">
-        <span class="header-emoji-bounce">🤪</span>
+        <span class="header-emoji-bounce">🍌</span>
         <h1 class="bored-sign">משעמם לך?</h1>
         <span class="header-emoji-bounce">🤡</span>
       </div>
-      <p class="subtitle">הגעת למקום הכי הזוי באינטרנט שיציל אותך משיעמום קטלני!</p>
+      <p class="subtitle">הגעת למכון הלאומי לטימטום והצלת משועממים קטלניים!</p>
       
-      <button class="emoji-party-btn" id="emojiPartyBtn">
-        <i class="fa-solid fa-wand-magic-sparkles"></i>
-        <span>הפעל מסיבת אימוגים מטומטמת! 🎉</span>
-      </button>
+      <div class="header-actions">
+        <button class="emoji-party-btn" id="emojiPartyBtn">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <span>הפעל מסיבת אימוגים מטומטמת! 🎉</span>
+        </button>
+      </div>
+
+      <!-- Stupid Level Controller -->
+      <div class="stupid-meter-card">
+        <label for="stupidSlider" id="stupidLevelDisplay" class="stupid-label">רמת טימטום: מוח של בננה קפואה 🍌🔥</label>
+        <input type="range" id="stupidSlider" min="0" max="100" value="95" class="stupid-slider">
+      </div>
     </header>
 
     <!-- Stats Bar -->

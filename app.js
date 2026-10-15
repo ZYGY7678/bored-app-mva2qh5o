@@ -72,6 +72,50 @@ const activities = [
     actionText: "האף אותר בהצלחה"
   },
 
+  // --- רמת טימטום שיא (חדש!) ---
+  {
+    category: "רמת טימטום שיא",
+    title: "תאכל כאילו אתה בננה במסווה של בנקים",
+    desc: "תחזיק ביד בננה (או חפץ צהוב כלשהו כמו עט או ספוג) ותסביר לו בלחש את תוכנית הבריחה שלך מהכourt.",
+    type: "extreme_stupid",
+    actionText: "הבננה הבינה הכל"
+  },
+  {
+    category: "רמת טימטום שיא",
+    title: "פקד על הלשון שלך לגעת באף 100 פעם",
+    desc: "רוב הסיכויים שתפספס לפחות 95 פעמים. המשך עד שהלשון תבקש חופשת מחלה.",
+    type: "extreme_stupid",
+    actionText: "הלשון בשביתה"
+  },
+  {
+    category: "רמת טימטום שיא",
+    title: "תן כיף למסך של הטלפון/מחשב שלך",
+    desc: "תן מכה קטנה ועדינה עם כף היד למסך ותגיד לו: 'כל הכבוד שאתה סובל אותי'.",
+    type: "extreme_stupid",
+    actionText: "נתתי כיף למסך"
+  },
+  {
+    category: "רמת טימטום שיא",
+    title: "תשאל את המיטה שלך אם היא תפוסה הלילה",
+    desc: "קודם תדפוק על המזרון פעמיים, תפתח מוש"ס ותשאל בנימוס אם מותר לך לישון שם היום.",
+    type: "extreme_stupid",
+    actionText: "קיבלתי אישור שינה"
+  },
+  {
+    category: "רמת טימטום שיא",
+    title: "תעשה קולות של מיקרוגל מקולקל",
+    desc: "תעשה 'בזזזז... ביפ ביפ ביפ! טרחחח!' בקול רם במשך 15 שניות כאילו אתה מחמם שאריות פיצה.",
+    type: "extreme_stupid",
+    actionText: "האוכל חם ומוכן"
+  },
+  {
+    category: "רמת טימטום שיא",
+    title: "תמציא שפה חדשה לעצמך ותגיד משפט",
+    desc: "אמור בקול: 'בלבולה-פיצה-מיש-מואש!' ותהנה מהתחושה שאתה חייזר עליון.",
+    type: "extreme_stupid",
+    actionText: "דיברתי חייזרית שוטפת"
+  },
+
   // --- קליקר מטופש ---
   {
     category: "קליקר מטופש",
@@ -94,13 +138,6 @@ const activities = [
     type: "clicker",
     actionText: "פוצץ את השעמום"
   },
-  {
-    category: "קליקר מטופש",
-    title: "לחיצה זוגית מוסמכת",
-    desc: "לחץ 10 פעמים בדיוק בקצב של פעימות לב איטיות. 1... 2... 3...",
-    type: "clicker",
-    actionText: "השלמתי פעימות"
-  },
 
   // --- תרפיה בבועות ---
   {
@@ -109,13 +146,6 @@ const activities = [
     desc: "אין תקציב לקנות פצפצים אמיתיים? אין בעיה. תפוצץ את הבועות הדיגיטליות האלה ותשמע את הקול בראש שלך.",
     type: "bubbles",
     actionText: "אפס בועות"
-  },
-  {
-    category: "תרפיה בבועות",
-    title: "שדה בועות ענק במיוחד",
-    desc: "שפע של בועות מחכות שתפצץ אותן אחת אחת בלי שום רגשות אשם.",
-    type: "bubbles",
-    actionText: "חיסלתי את השדה"
   },
 
   // --- חכמת רחוב & גורל ---
@@ -133,29 +163,6 @@ const activities = [
     type: "fortune",
     actionText: "תגלה את הנבואה"
   },
-  {
-    category: "חכמת רחוב",
-    title: "הורוסקופ המשעממים הרשמי",
-    desc: "מה הכוכבים אומרים על זה שאתה מחפש מה לעשות באינטרנט במקום לישון? בוא נגלה.",
-    type: "fortune",
-    actionText: "מה אומרים הכוכבים?"
-  },
-
-  // --- ספורט קיצוני ---
-  {
-    category: "ספורט קיצוני",
-    title: "אליפות העולם בהבהלת חפצים דוממים",
-    desc: "תתגנב בשקט לכוס שתייה או לשלט ותצעק עליהם פתאום. אם הם זזו, נפסלת. אם הם לא זזו, ניצחת באליפות.",
-    type: "stare",
-    actionText: "התחל בהתגנבות"
-  },
-  {
-    category: "ספורט קיצוני",
-    title: "ריצת 100 מטר באצבעות הידיים על השולחן",
-    desc: "תדמיין שהאצבעות שלך הן רצים אולימפיים ותן ספרינט מטורף מקצה השולחן השני וחזרה.",
-    type: "generic",
-    actionText: "שברתי שיא עולם"
-  },
 
   // --- התחמקויות מקצועיות ---
   {
@@ -164,61 +171,6 @@ const activities = [
     desc: "צריך תירוץ הזוי למה אתה לא יכול לעשות כלום כרגע? לחץ על הכפתור וקבל משפט שיגרום לאחרים לתפוס את הראש.",
     type: "excuse",
     actionText: "תמציא לי תירוץ"
-  },
-  {
-    category: "התחמקויות מקצועיות",
-    title: "תירוצים מתקדמים לשאלת 'נו, מה עם...?'",
-    desc: "קבל משפט מחץ מושלם לכל פעם שמישהו מבקש ממך לעשות משהו מעצבן.",
-    type: "excuse",
-    actionText: "תן לי תירוץ מנצח"
-  },
-
-  // --- אתגר פיזי מביך ---
-  {
-    category: "אתגר פיזי מביך",
-    title: "הליכת פינגווין לסלון ובחזרה",
-    desc: "תצמיד את הידיים לגוף, תעשה קולות 'קווקוו' ותרגול הליכת פינגווין מהחדר למטבח וחזרה.",
-    type: "penguin",
-    actionText: "סיימתי לצעוד כמו פינגווין"
-  },
-  {
-    category: "אתגר פיזי מביך",
-    title: "לעמוד על רגל אחת כמו פלמינגו עייף",
-    desc: "הרים רגל אחת באוויר ונסו להחזיק מעמד 15 שניות בלי לאבד שיווי משקל ובלי לצחוק.",
-    type: "penguin",
-    actionText: "עמדתי כמו פלמינגו"
-  },
-
-  // --- פילוסופיה בגרוש ---
-  {
-    category: "פילוסופיה בגרוש",
-    title: "תספור את השערות על היד שלך",
-    desc: "זה הזמן לבדוק אם יש לך זוג שערות תאומות או בודדות. ספר אותן אחת אחת. אם איבדת ספירה ב-14, תתחיל מחדש.",
-    type: "hairs",
-    actionText: "ספרתי והתייאשתי"
-  },
-  {
-    category: "פילוסופיה בגרוש",
-    title: "תהייה קיומית על פיצה",
-    desc: "למה פיצה עגולה, נארזת בקופסה מרובעת, ונאכלת במשולשים? חשוב על זה עמוקות במשך דקה שלמה.",
-    type: "generic",
-    actionText: "המוח שלי התפוצץ"
-  },
-
-  // --- מוזיקת עתיד ---
-  {
-    category: "מוזיקת עתיד",
-    title: "קונצרט נקישות שיניים קצבי",
-    desc: "נקישות קצביות עם השיניים לפי קצב של שיר מטאל דמיוני. השדל לא לשבור סתימה.",
-    type: "teeth",
-    actionText: "נתתי הופעה"
-  },
-  {
-    category: "מוזיקת עתיד",
-    title: "תיפוף סוער על הבטן של עצמך",
-    desc: "הפוך את הבטן שלך לתופים אפריקאיים למשך 20 שניות. הופעה חינם לעצמך!",
-    type: "generic",
-    actionText: "סיימתי את הסולו"
   },
 
   // --- בדיחות קרש מטופשות ---
@@ -236,20 +188,6 @@ const activities = [
     type: "joke",
     actionText: "נחנקתי מהצחוק"
   },
-  {
-    category: "בדיחת קרש",
-    title: "איך קוראים לדוב ששומר על דיאטה?",
-    desc: "דבּ-בּלובּ! (או פשוט דוב רעב מאוד שדורש דבש מיד).",
-    type: "joke",
-    actionText: "איזה שפל מדרגה"
-  },
-  {
-    category: "בדיחת קרש",
-    title: "למה מלפפון חמוץ אף פעם לא מרגיש לבד?",
-    desc: "כי הוא תמיד נמצא בחברה טובה בצנצנת עם עוד חברים מלוחים.",
-    type: "joke",
-    actionText: "הבנתי, די"
-  },
 
   // --- חידות קשות ומטופשות ---
   {
@@ -258,20 +196,6 @@ const activities = [
     desc: "מה עושה שעון שעצר מלכת? צודק לגמרי פעמיים ביום! אבל מה הוא עושה בשאר הזמן? מתבטל כמוך.",
     type: "riddle",
     actionText: "הבנתי את הפאנץ'"
-  },
-  {
-    category: "חידה מטופשת",
-    title: "חידת הבננה והקוף",
-    desc: "אם קוף טיפס על עץ באורך 10 מטר, ובכל דקה הוא עולה מטר אחד ומחליק שניים אחורה, מתי הוא יתייאש ויזמין פיצה?",
-    type: "riddle",
-    actionText: "מזמין פיצה עכשיו"
-  },
-  {
-    category: "חידה מטופשת",
-    title: "מה יש לו עיניים אבל לא רואה?",
-    desc: "תשובה: תפוח אדמה! (וגם אתה אחרי 3 שעות מול המסך).",
-    type: "riddle",
-    actionText: "בול פגיעה"
   }
 ];
 
@@ -299,13 +223,14 @@ const excuses = [
 ];
 
 // Stupid Emojis to float in background
-const stupidEmojis = ["🤪", "🤡", "💩", "🦄", "🍌", "💥", "👻", "🌮", "🐸", "🧌", "🤖", "🥴", "🍕", "🥳", "💫", "🦩"];
+const stupidEmojis = ["🤪", "🤡", "💩", "🦄", "🍌", "💥", "👻", "🌮", "🐸", "🧌", "🤖", "🥴", "🍕", "🥳", "💫", "🦩", "🦆", "🥴", "🧻", "💥"];
 
 // App State
 let currentActivity = null;
 let stats = {
   completedCount: 0,
-  boredLevel: 100
+  boredLevel: 100,
+  stupidPoints: 0
 };
 
 // DOM Elements
@@ -318,6 +243,8 @@ const nextBtn = document.getElementById('nextBtn');
 const completedCountEl = document.getElementById('completedCount');
 const boredLevelEl = document.getElementById('boredLevel');
 const emojiPartyBtn = document.getElementById('emojiPartyBtn');
+const stupidSlider = document.getElementById('stupidSlider');
+const stupidLevelDisplay = document.getElementById('stupidLevelDisplay');
 
 // Initialize App
 function init() {
@@ -327,10 +254,23 @@ function init() {
   nextBtn.addEventListener('click', loadRandomActivity);
   emojiPartyBtn.addEventListener('click', triggerEmojiChaos);
 
+  if (stupidSlider) {
+    stupidSlider.addEventListener('input', (e) => {
+      const val = e.target.value;
+      if (val < 30) stupidLevelDisplay.textContent = "רמת טימטום: סביר ביותר (משעמם)";
+      else if (val < 70) stupidLevelDisplay.textContent = "רמת טימטום: ליצן שכונתי 🤡";
+      else if (val < 100) stupidLevelDisplay.textContent = "רמת טימטום: מוח של בננה קפואה 🍌🔥";
+      else stupidLevelDisplay.textContent = "רמת טימטום: קטסטרופה קוסמית מוחלטת!! 🤪💥🦄";
+      
+      // Spawn extra emojis based on slider
+      spawnFloatingEmoji(stupidEmojis[Math.floor(Math.random() * stupidEmojis.length)]);
+    });
+  }
+
   // Periodic random floating stupid emoji
   setInterval(() => {
     spawnFloatingEmoji();
-  }, 2500);
+  }, 2200);
 }
 
 // Spawn random floating emoji across screen
@@ -346,8 +286,8 @@ function spawnFloatingEmoji(emojiOverride) {
   el.style.left = `${startX}px`;
   el.style.bottom = `-50px`;
   
-  const duration = 3 + Math.random() * 3;
-  const rot = (Math.random() - 0.5) * 360;
+  const duration = 2.5 + Math.random() * 3;
+  const rot = (Math.random() - 0.5) * 540;
   el.style.animation = `floatUpStupid ${duration}s linear forwards`;
   el.style.setProperty('--rot', `${rot}deg`);
 
@@ -360,16 +300,24 @@ function spawnFloatingEmoji(emojiOverride) {
 
 // Emoji Chaos Party Button!
 function triggerEmojiChaos() {
-  for (let i = 0; i < 35; i++) {
+  for (let i = 0; i < 45; i++) {
     setTimeout(() => {
       spawnFloatingEmoji();
-    }, i * 60);
+    }, i * 50);
   }
   
   // Shake main card
   const card = document.querySelector('.activity-card');
   card.classList.add('card-shake');
   setTimeout(() => card.classList.remove('card-shake'), 500);
+
+  // Random hilarious banner message
+  const funBanners = [
+    "מסיבת טימוטום הופעלה! השכנים מזמינים ציאניד! 🤡",
+    "המוח שלך כרגע נכנס למצב ענן מטומטם במיוחד! ☁️🍌",
+    "איזה כיף, איבדת עוד 10 נקודות IQ בהצלחה רבה! 🥳"
+  ];
+  activityTitle.textContent = funBanners[Math.floor(Math.random() * funBanners.length)];
 }
 
 // Load a random activity
@@ -396,8 +344,6 @@ function loadRandomActivity() {
   card.offsetHeight; // trigger reflow
   card.style.animation = 'fadeIn 0.4s ease';
 
-  // Spawn a couple emojis on switch
-  spawnFloatingEmoji();
   spawnFloatingEmoji();
 }
 
@@ -422,6 +368,23 @@ function renderInteractiveComponent(type) {
       interactiveArea.appendChild(btn);
       break;
 
+    case 'extreme_stupid':
+      const extDiv = document.createElement('div');
+      extDiv.style.textAlign = 'center';
+      extDiv.innerHTML = `
+        <div style="font-size: 2.8rem; margin-bottom: 10px; animation: bounceEmoji 1s infinite alternate;">🍌🤡🤪</div>
+        <button class="clicker-btn" style="width: auto; height: auto; padding: 12px 24px; border-radius: 30px; font-size: 1rem; background: linear-gradient(135deg, #e91e63, #ff5722);">
+          לחץ להזרקת מטומטמת ישירות למוח 🧠⚡
+        </button>
+      `;
+      extDiv.querySelector('button').onclick = () => {
+        spawnFloatingEmoji("🍌");
+        spawnFloatingEmoji("💥");
+        extDiv.querySelector('div').textContent = "🤪 מוחך הוא כעת אננס מזמר! הצלחה מסחררת!";
+      };
+      interactiveArea.appendChild(extDiv);
+      break;
+
     case 'bubbles':
       const grid = document.createElement('div');
       grid.className = 'bubble-wrap';
@@ -432,7 +395,7 @@ function renderInteractiveComponent(type) {
         bubble.onclick = () => {
           if(!bubble.classList.contains('popped')) {
             bubble.classList.add('popped');
-            const popEmojis = ['💥', '🤪', '🎈', '⭐', '✨'];
+            const popEmojis = ['💥', '🤪', '🎈', '⭐', '✨', '🍌', '🤡'];
             bubble.innerHTML = popEmojis[Math.floor(Math.random() * popEmojis.length)];
             spawnFloatingEmoji("💨");
             checkAllBubblesPopped(grid);
@@ -493,7 +456,7 @@ function renderInteractiveComponent(type) {
 function checkAllBubblesPopped(grid) {
   const remaining = grid.querySelectorAll('.bubble:not(.popped)').length;
   if(remaining === 0) {
-    triggerSuccess("פצפצת הכל! השעמום שלך התפוגג בענן של קונפטי! 🎉");
+    triggerSuccess("פצפצת הכל! השעמום שלך התפוגג בענן של קונפטי בננה! 🎉");
   }
 }
 
@@ -539,12 +502,10 @@ function triggerSuccess(msg) {
   stats.boredLevel = Math.max(0, stats.boredLevel - 20);
   updateStatsDisplay();
   
-  // Trigger mini emoji rain
   for(let i=0; i<10; i++) {
     setTimeout(() => spawnFloatingEmoji(), i * 80);
   }
 
-  const originalTitle = activityTitle.textContent;
   activityTitle.textContent = `🎉 ${msg}`;
   setTimeout(() => {
     loadRandomActivity();

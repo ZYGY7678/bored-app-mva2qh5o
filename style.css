@@ -48,23 +48,23 @@ body {
   position: absolute;
   font-size: 2.2rem;
   user-select: none;
-  opacity: 0.75;
-  filter: drop-shadow(0 0 6px rgba(255,255,255,0.3));
+  opacity: 0.8;
+  filter: drop-shadow(0 0 8px rgba(255,255,255,0.4));
 }
 
 @keyframes floatUpStupid {
   0% {
-    transform: translateY(0) rotate(0deg) scale(0.8);
+    transform: translateY(0) rotate(0deg) scale(0.7);
     opacity: 0;
   }
   20% {
-    opacity: 0.9;
+    opacity: 0.95;
   }
   80% {
-    opacity: 0.9;
+    opacity: 0.95;
   }
   100% {
-    transform: translateY(-110vh) rotate(var(--rot)) scale(1.4);
+    transform: translateY(-110vh) rotate(var(--rot)) scale(1.5);
     opacity: 0;
   }
 }
@@ -87,7 +87,8 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
+  width: 100%;
 }
 
 .header-top-row {
@@ -103,9 +104,9 @@ header {
 }
 
 .bored-sign {
-  background: linear-gradient(135deg, #FF5722, #FF9800, #FFC107, #E91E63, #9C27B0);
-  background-size: 300% 300%;
-  animation: gradientBG 6s ease infinite;
+  background: linear-gradient(135deg, #FF5722, #FF9800, #FFC107, #E91E63, #9C27B0, #00bcd4);
+  background-size: 400% 400%;
+  animation: gradientBG 5s ease infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: clamp(3rem, 10vw, 5.5rem);
@@ -120,30 +121,62 @@ header {
   font-size: 1.1rem;
 }
 
+.header-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Stupid Meter Card */
+.stupid-meter-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 20px;
+  border-radius: 16px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.stupid-label {
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.stupid-slider {
+  width: 100%;
+  accent-color: var(--primary);
+  cursor: pointer;
+  height: 6px;
+}
+
 /* Emoji Party Button */
 .emoji-party-btn {
-  background: linear-gradient(135deg, #9C27B0, #E91E63, #FF5722);
-  background-size: 200% 200%;
-  animation: gradientBG 4s ease infinite;
+  background: linear-gradient(135deg, #9C27B0, #E91E63, #FF5722, #FFC107);
+  background-size: 300% 300%;
+  animation: gradientBG 3s ease infinite;
   color: white;
   border: none;
-  padding: 10px 22px;
+  padding: 12px 24px;
   border-radius: 30px;
   font-family: 'Rubik', sans-serif;
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 6px 20px rgba(156, 39, 176, 0.4);
+  box-shadow: 0 6px 20px rgba(156, 39, 176, 0.5);
   transition: transform 0.2s, box-shadow 0.2s;
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-top: 6px;
 }
 
 .emoji-party-btn:hover {
-  transform: scale(1.05) rotate(1deg);
-  box-shadow: 0 8px 25px rgba(233, 30, 99, 0.6);
+  transform: scale(1.06) rotate(1deg);
+  box-shadow: 0 8px 25px rgba(233, 30, 99, 0.7);
 }
 
 .emoji-party-btn:active {
@@ -384,7 +417,7 @@ header {
 
 @keyframes bounceEmoji {
   0% { transform: translateY(0) rotate(0deg); }
-  100% { transform: translateY(-8px) rotate(10deg); }
+  100% { transform: translateY(-8px) rotate(12deg); }
 }
 
 @keyframes spinSlow {
