@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF5722"/>
+      <stop offset="100%" stop-color="#FFC107"/>
+    </linearGradient>
+  </defs>
+  <circle cx="50" cy="50" r="45" fill="url(#grad)" />
+  <!-- Dizzy eyes / bored face -->
+  <path d="M30 40 L42 52 M42 40 L30 52" stroke="#1E1E24" stroke-width="6" stroke-linecap="round"/>
+  <path d="M58 40 L70 52 M70 40 L58 52" stroke="#1E1E24" stroke-width="6" stroke-linecap="round"/>
+  <!-- Bored wavy mouth -->
+  <path d="M35 70 Q 50 55, 65 70" fill="none" stroke="#1E1E24" stroke-width="6" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>משעמם לך? תתרפא מזה מיד!</title>
+  
+  <!-- Favicon & PWA Manifest -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#FF5722">
+
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header with Giant Bored Sign -->
+    <header>
+      <h1 class="bored-sign">משעמם לך?</h1>
+      <p class="subtitle">הגעת למקום היחיד באינטרנט שיציל אותך משיעמום קטלני!</p>
+    </header>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+      <div class="stat-item">
+        <i class="fa-solid fa-face-grimace" style="color: var(--accent);"></i>
+        <span>רמת שעמום: <strong id="boredLevel">100%</strong></span>
+      </div>
+      <div class="stat-item">
+        <i class="fa-solid fa-trophy" style="color: var(--primary);"></i>
+        <span>משימות שבוצעו: <strong id="completedCount">0</strong></span>
+      </div>
+    </div>
+
+    <!-- Main Activity Card -->
+    <main class="activity-card">
+      <div class="activity-badge" id="activityBadge">טוען שטויות...</div>
+      <h2 class="activity-title" id="activityTitle">רגע טוענים את השעמום שלך...</h2>
+      <p class="activity-desc" id="activityDesc">כדאי להתכונן נפשית, זה הולך להיות מוזר.</p>
+      
+      <!-- Interactive Widget Area -->
+      <div class="interactive-area" id="interactiveArea">
+        <!-- Dynamic widget injected here -->
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="btn-group">
+        <button class="btn btn-secondary" id="nextBtn">
+          <i class="fa-solid fa-shuffle"></i>
+          <span>תביא משהו אחר</span>
+        </button>
+        <button class="btn btn-primary" id="mainActionBtn">
+          <span>עשיתי את זה!</span>
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+      </div>
+    </main>
+  </div>
+
+  <!-- App Logic -->
+  <script src="app.js"></script>
+</body>
+</html>

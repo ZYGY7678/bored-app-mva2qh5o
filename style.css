@@ -1,0 +1,300 @@
+:root {
+  --bg-color: #121214;
+  --card-bg: #1e1e24;
+  --text-main: #f8f9fa;
+  --text-muted: #adb5bd;
+  --primary: #FF5722;
+  --primary-hover: #F4511E;
+  --accent: #FFC107;
+  --accent-blue: #00bcd4;
+  --accent-purple: #9c27b0;
+  --radius: 20px;
+  --shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  direction: rtl;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+/* Header & Bored Banner */
+header {
+  text-align: center;
+  margin-top: 20px;
+  animation: floatBanner 3s ease-in-out infinite;
+}
+
+.bored-sign {
+  background: linear-gradient(135deg, #FF5722, #FF9800, #FFC107);
+  background-size: 200% 200%;
+  animation: gradientBG 5s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: clamp(3rem, 10vw, 5.5rem);
+  font-weight: 900;
+  text-shadow: 0 5px 15px rgba(255, 87, 34, 0.3);
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-top: 8px;
+}
+
+/* Stats bar */
+.stats-bar {
+  display: flex;
+  gap: 15px;
+  background: var(--card-bg);
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Main Activity Card */
+.activity-card {
+  background: var(--card-bg);
+  width: 100%;
+  border-radius: var(--radius);
+  padding: 30px;
+  box-shadow: var(--shadow);
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.activity-card:hover {
+  transform: translateY(-4px);
+}
+
+.activity-badge {
+  background: rgba(255, 87, 34, 0.15);
+  color: var(--primary);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.activity-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: var(--text-main);
+}
+
+.activity-desc {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Interactive Component Area inside Card */
+.interactive-area {
+  width: 100%;
+  min-height: 150px;
+  background: rgba(0,0,0,0.25);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  padding: 15px;
+  position: relative;
+  border: 1px dashed rgba(255,255,255,0.1);
+}
+
+/* Action Buttons */
+.btn-group {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.btn {
+  flex: 1;
+  min-width: 140px;
+  padding: 16px 24px;
+  border-radius: 14px;
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  box-shadow: 0 6px 20px rgba(255, 87, 34, 0.4);
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  transform: scale(1.02);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-main);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Mini Games & Interactive Styles */
+.clicker-btn {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #FFC107, #FF5722);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(255, 193, 7, 0.5);
+  transition: transform 0.1s;
+}
+
+.clicker-btn:active {
+  transform: scale(0.9);
+}
+
+.stare-box {
+  font-size: 3rem;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.3s;
+}
+
+.bubble-wrap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  width: 100%;
+  max-width: 280px;
+}
+
+.bubble {
+  aspect-ratio: 1;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.2);
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
+.bubble.popped {
+  background: transparent;
+  border-color: rgba(255,255,255,0.05);
+  transform: scale(0.8);
+  color: var(--text-muted);
+}
+
+.fortune-text {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--accent);
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+
+.excuse-box {
+  background: rgba(255,255,255,0.05);
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #8bc34a;
+  width: 100%;
+}
+
+/* Animations */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes floatBanner {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+  .activity-card {
+    padding: 20px;
+  }
+  .activity-title {
+    font-size: 1.5rem;
+  }
+}
+=====FILE: app.jschl
