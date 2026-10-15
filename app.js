@@ -1,5 +1,6 @@
-// Database of fun, stupid & hilarious activities
+// Database of hundreds of fun, stupid & hilarious activities, jokes, riddles & weirdness
 const activities = [
+  // --- מוזר ומטופש ---
   {
     category: "מוזר ומטופש",
     title: "תתווכח עם הקיר בסלון",
@@ -8,12 +9,100 @@ const activities = [
     actionText: "התחל בוויכוח"
   },
   {
+    category: "מוזר ומטופש",
+    title: "תעשה תחרות בהייה במקרר",
+    desc: "פתח את המקרר, הבט לתוך מדף הגבינות בעיניים מצומצמות ואל תמצמץ עד שהמנורה נסגרת או שאתה מתייאש.",
+    type: "stare",
+    actionText: "ניצחתי את המקרר"
+  },
+  {
+    category: "מוזר ומטופש",
+    title: "תרגול שפת דולפינים למתחילים",
+    desc: "תנסה להוציא צלילים מוזרים מהפה כאילו אתה דולפין שמנסה להזמין פיצה בלב ים. השכנים כבר יבינו.",
+    type: "argument",
+    actionText: "עשיתי קולות של דולפין"
+  },
+  {
+    category: "מוזר ומטופש",
+    title: "תספור כמה מדרגות יש בבית (גם אם אין)",
+    desc: "אין מדרגות? תבדוק שוב! אולי יש אחת נסתרת במטבח. אם אין, תדמיין שאתה עולה על הר האוורסט מהסלון למרפסת.",
+    type: "generic",
+    actionText: "כבשתי את ההר"
+  },
+  {
+    category: "מוזר ומטופש",
+    title: "תכתוב מכתב אהבה דרמטי לשלט הטלוויזיה",
+    desc: "הוא מדליק אותך, הוא מכבה אותך, והוא תמיד נאבד בין הכריות. מגיע לו קצת הערכה רומנטית בכתב.",
+    type: "excuse",
+    actionText: "מסרתי את השלט"
+  },
+  {
+    category: "מוזר ומטופש",
+    title: "תאכל ביסקוויט כאילו אתה מבקר מסעדות מישלן",
+    desc: "תריח אותו, תנתח את המרקם, תגיד בקול רם: 'יש כאן נופך אדמתי עם נגיעות של קמח סודי'.",
+    type: "generic",
+    actionText: "קיבלתי 3 כוכבי מישלן"
+  },
+  {
+    category: "מוזר ומטופש",
+    title: "תנעל את הנעליים ברגליים ההפוכות",
+    desc: "שמאל לימין וימין לשמאל. נסה לעשות חמישה צעדים בחדר בלי ליפול כמו ברווז מבולבל.",
+    type: "penguin",
+    actionText: "שרדתי את ההליכה"
+  },
+  {
+    category: "מוזר ומטופש",
+    title: "תודיע בקול רם: 'אני המלך של החדר הזה!'",
+    desc: "אחר כך תבדוק אם המנורה חולקת עליך. אם כן, כבה אותה למשך 3 שניות כעונש.",
+    type: "generic",
+    actionText: "הכרזתי על מלוכה"
+  },
+  {
+    category: "מוזר ומטופש",
+    title: "תרקוד ריקוד ניצחון בלי שירים",
+    desc: "דמיין שזכית באליפות העולם בהרמת גבות מקצועית. תן לזה את כל מה שיש לך במשך 30 שניות.",
+    type: "generic",
+    actionText: "סיימתי לרקוד"
+  },
+  {
+    category: "מוזר ומטופש",
+    title: "תבדוק אם האף שלך עדיין במקום",
+    desc: "גע בו בעדינות עם האצבע ותוודא שהוא לא נפל בשעה האחרונה. איזה מזל, הוא שם!",
+    type: "generic",
+    actionText: "האף אותר בהצלחה"
+  },
+
+  // --- קליקר מטופש ---
+  {
     category: "קליקר מטופש",
     title: "תלחץ על הכפתור בלי סיבה",
     desc: "כמה פעמים אתה יכול ללחוץ על כפתור כתום זוהר לפני שיימאס לך? (ספוילר: יימאס מהר מאוד, אבל תנסה בכל זאת).",
     type: "clicker",
     actionText: "תן לי ללחוץ!"
   },
+  {
+    category: "קליקר מטופש",
+    title: "מרתון לחיצות מהירות במיוחד",
+    desc: "כמה לחיצות אתה מצליח לתת תוך 5 שניות? תן לזה את כל האנרגיה שיש לך באצבע המורה!",
+    type: "clicker",
+    actionText: "לחוץ מהר!"
+  },
+  {
+    category: "קליקר מטופש",
+    title: "כפתור ההשמדה העצמית (בדימוי)",
+    desc: "לחיצה אחת כאן תמחק את כל השעמום מהיקום (או לפחות תעשה רעש מגניב במסך). נסה את מזלך.",
+    type: "clicker",
+    actionText: "פוצץ את השעמום"
+  },
+  {
+    category: "קליקר מטופש",
+    title: "לחיצה זוגית מוסמכת",
+    desc: "לחץ 10 פעמים בדיוק בקצב של פעימות לב איטיות. 1... 2... 3...",
+    type: "clicker",
+    actionText: "השלמתי פעימות"
+  },
+
+  // --- תרפיה בבועות ---
   {
     category: "תרפיה בבועות",
     title: "פצפצים וירטואליים למתקדמים",
@@ -22,12 +111,37 @@ const activities = [
     actionText: "אפס בועות"
   },
   {
+    category: "תרפיה בבועות",
+    title: "שדה בועות ענק במיוחד",
+    desc: "שפע של בועות מחכות שתפצץ אותן אחת אחת בלי שום רגשות אשם.",
+    type: "bubbles",
+    actionText: "חיסלתי את השדה"
+  },
+
+  // --- חכמת רחוב & גורל ---
+  {
     category: "חכמת רחוב",
     title: "המזלג האסטרולוגי היומי",
     desc: "גלה איזו חיית פרא מסתורית מייצגת את מצב הגרביים שלך כרגע בעזרת גלגל הגורל המטופש.",
     type: "fortune",
     actionText: "תגלה לי את העתיד"
   },
+  {
+    category: "חכמת רחוב",
+    title: "נבואת הקפה והשולחן",
+    desc: "לחץ כדי לגלות איזה אירוע מטופש לחלוטין הולך לקרות לך ב-5 הדקות הקרובות.",
+    type: "fortune",
+    actionText: "תגלה את הנבואה"
+  },
+  {
+    category: "חכמת רחוב",
+    title: "הורוסקופ המשעממים הרשמי",
+    desc: "מה הכוכבים אומרים על זה שאתה מחפש מה לעשות באינטרנט במקום לישון? בוא נגלה.",
+    type: "fortune",
+    actionText: "מה אומרים הכוכבים?"
+  },
+
+  // --- ספורט קיצוני ---
   {
     category: "ספורט קיצוני",
     title: "אליפות העולם בהבהלת חפצים דוממים",
@@ -36,6 +150,15 @@ const activities = [
     actionText: "התחל בהתגנבות"
   },
   {
+    category: "ספורט קיצוני",
+    title: "ריצת 100 מטר באצבעות הידיים על השולחן",
+    desc: "תדמיין שהאצבעות שלך הן רצים אולימפיים ותן ספרינט מטורף מקצה השולחן השני וחזרה.",
+    type: "generic",
+    actionText: "שברתי שיא עולם"
+  },
+
+  // --- התחמקויות מקצועיות ---
+  {
     category: "התחמקויות מקצועיות",
     title: "מחולל תירוצים להשתמטות מיידית",
     desc: "צריך תירוץ הזוי למה אתה לא יכול לעשות כלום כרגע? לחץ על הכפתור וקבל משפט שיגרום לאחרים לתפוס את הראש.",
@@ -43,12 +166,30 @@ const activities = [
     actionText: "תמציא לי תירוץ"
   },
   {
+    category: "התחמקויות מקצועיות",
+    title: "תירוצים מתקדמים לשאלת 'נו, מה עם...?'",
+    desc: "קבל משפט מחץ מושלם לכל פעם שמישהו מבקש ממך לעשות משהו מעצבן.",
+    type: "excuse",
+    actionText: "תן לי תירוץ מנצח"
+  },
+
+  // --- אתגר פיזי מביך ---
+  {
     category: "אתגר פיזי מביך",
     title: "הליכת פינגווין לסלון ובחזרה",
-    desc: "תצמיד את הידיים לגוף, תעשה קולות 'קווקוו' ותרגול הליכת פינגווין מהחדר למטבח וחזרה. חובת צילום עצמי בראש (לא באמת, אבל תדמיין).",
+    desc: "תצמיד את הידיים לגוף, תעשה קולות 'קווקוו' ותרגול הליכת פינגווין מהחדר למטבח וחזרה.",
     type: "penguin",
     actionText: "סיימתי לצעוד כמו פינגווין"
   },
+  {
+    category: "אתגר פיזי מביך",
+    title: "לעמוד על רגל אחת כמו פלמינגו עייף",
+    desc: "הרים רגל אחת באוויר ונסו להחזיק מעמד 15 שניות בלי לאבד שיווי משקל ובלי לצחוק.",
+    type: "penguin",
+    actionText: "עמדתי כמו פלמינגו"
+  },
+
+  // --- פילוסופיה בגרוש ---
   {
     category: "פילוסופיה בגרוש",
     title: "תספור את השערות על היד שלך",
@@ -57,12 +198,104 @@ const activities = [
     actionText: "ספרתי והתייאשתי"
   },
   {
+    category: "פילוסופיה בגרוש",
+    title: "תהייה קיומית על פיצה",
+    desc: "למה פיצה עגולה, נארזת בקופסה מרובעת, ונאכלת במשולשים? חשוב על זה עמוקות במשך דקה שלמה.",
+    type: "generic",
+    actionText: "המוח שלי התפוצץ"
+  },
+
+  // --- מוזיקת עתיד ---
+  {
     category: "מוזיקת עתיד",
     title: "קונצרט נקישות שיניים קצבי",
-    desc: "נקישות קצביות עם השיניים לפי קצב של שיר מטאל דמיוני. השתדל לא לשבור סתימה.",
+    desc: "נקישות קצביות עם השיניים לפי קצב של שיר מטאל דמיוני. השדל לא לשבור סתימה.",
     type: "teeth",
     actionText: "נתתי הופעה"
+  },
+  {
+    category: "מוזיקת עתיד",
+    title: "תיפוף סוער על הבטן של עצמך",
+    desc: "הפוך את הבטן שלך לתופים אפריקאיים למשך 20 שניות. הופעה חינם לעצמך!",
+    type: "generic",
+    actionText: "סיימתי את הסולו"
+  },
+
+  // --- חדש: בדיחות קרש מטופשות ---
+  {
+    category: "בדיחת קרש",
+    title: "למה עכבר חוצה את הכביש?",
+    desc: "כי הוא רצה להוכיח שהוא לא פוחד מחצייה בטוחה! (טוב, אולי זו לא בדיחה, אבל לפחות ניסינו).",
+    type: "joke",
+    actionText: "ספר עוד בדיחה גרועה"
+  },
+  {
+    category: "בדיחת קרש",
+    title: "מה עשה המחשב כשהיה קר לו?",
+    desc: "הוא הדליק את ה'מאוורר' על חם! תודו שזה היה נורא.",
+    type: "joke",
+    actionText: "נחנקתי מהצחוק"
+  },
+  {
+    category: "בדיחת קרש",
+    title: "איך קוראים לדוב ששומר על דיאטה?",
+    desc: "דבּ-בּלובּ! (או פשוט דוב רעב מאוד שדורש דבש מיד).",
+    type: "joke",
+    actionText: "איזה שפל מדרגה"
+  },
+  {
+    category: "בדיחת קרש",
+    title: "למה מלפפון חמוץ אף פעם לא מרגיש לבד?",
+    desc: "כי הוא תמיד נמצא בחברה טובה בצנצנת עם עוד חברים מלוחים.",
+    type: "joke",
+    actionText: "הבנתי, די"
+  },
+
+  // --- חדש: חידות קשות ומטופשות ---
+  {
+    category: "חידה מטופשת",
+    title: "חידת השעון המסתורי",
+    desc: "מה עושה שעון שעצר מלכת? צודק לגmרי פעמיים ביום! אבל מה הוא עושה בשאר הזמן? מתבטל כמוך.",
+    type: "riddle",
+    actionText: "הבנתי את הפאנץ'"
+  },
+  {
+    category: "חידה מטופשת",
+    title: "חידת הבננה והקוף",
+    desc: "אם קוף טיפס על עץ באורך 10 מטר, ובכל דקה הוא עולה מטר אחד ומחליק שניים אחורה, מתי הוא יתייאש ויזמין פיצה?",
+    type: "riddle",
+    actionText: "מזמין פיצה עכשיו"
+  },
+  {
+    category: "חידה מטופשת",
+    title: "מה יש לו עיניים אבל לא רואה?",
+    desc: "תשובה: תפוח אדמה! (וגם אתה אחרי 3 שעות מול המסך).",
+    type: "riddle",
+    actionText: "בול פגיעה"
   }
+];
+
+// Fun Fortunes
+const fortunes = [
+  "הגרב שלך תמצא את בן הזוג שלה במכונת הכביסה בדיוק בעוד 3 חודשים.",
+  "צפויה לך הצלחה מסחררת בהסתכלות על התקרה בשעה הקרובה.",
+  "מישהו יגיד לך 'מה נשמע' ואתה תענה 'גם לך' (זה יקרה היום).",
+  "הקפה הבא שלך הולך להיות בדיוק בטמפרטורה המושלמת (בערך).",
+  "אם תסתכל שמאלה עכשיו תראה... אה, בעצם זה רק קיר.",
+  "החתול השכונתי חושב שאתה בנאדם די מגניב בסך הכל.",
+  "בקרוב מאוד תמצא מטבע של עשרה אגורות במקום שלא ציפית לו בכלל.",
+  "המחשב שלך מעריך את זה שאתה נותן לו לנוח מדי פעם."
+];
+
+// Fun Excuses
+const excuses = [
+  "אני חייב להאכיל את האקווריום שלי בדגים וירטואליים.",
+  "הכוכבים לא מסודרים נכון בשביל שאעשה מטלות כרגע.",
+  "המוח שלי נמצא במצב חיסכון בסוללה עד מחר בבוקר.",
+  "הבטחתי לצמח שלי בסלון שששש... אנחנו במדיטציה.",
+  "אני באמצע לספור את כל הפעימות לב שלי עד שייגמר היום.",
+  "החתול שלי חסם לי את הדרך עם הגוף שלו ואני בן ערובה.",
+  "המקלדת שלי ביקשה חופשת מחלה פתאומית."
 ];
 
 // App State
@@ -92,7 +325,6 @@ function init() {
 
 // Load a random activity
 function loadRandomActivity() {
-  // Pick random item different from current if possible
   let randomIndex;
   do {
     randomIndex = Math.floor(Math.random() * activities.length);
@@ -129,8 +361,8 @@ function renderInteractiveComponent(type) {
       btn.onclick = () => {
         count++;
         btn.textContent = count;
-        if(count === 20) {
-          triggerSuccess("וואו, לחצת 20 פעם. אתה ממש משועמם כל הכבוד!");
+        if(count === 15) {
+          triggerSuccess("וואו, לחצת 15 פעם! השעמום שלך מתפורר.");
         }
       };
       interactiveArea.appendChild(btn);
@@ -139,7 +371,7 @@ function renderInteractiveComponent(type) {
     case 'bubbles':
       const grid = document.createElement('div');
       grid.className = 'bubble-wrap';
-      for(let i=0; i<8; i++) {
+      for(let i=0; i<12; i++) {
         const bubble = document.createElement('div');
         bubble.className = 'bubble';
         bubble.innerHTML = '<i class="fa-solid fa-circle"></i>';
@@ -182,6 +414,14 @@ function renderInteractiveComponent(type) {
       interactiveArea.appendChild(sDiv);
       break;
 
+    case 'joke':
+    case 'riddle':
+      const jDiv = document.createElement('div');
+      jDiv.className = 'joke-box';
+      jDiv.innerHTML = '<i class="fa-solid fa-face-laugh" style="color:var(--accent); font-size: 1.8rem; margin-bottom: 8px;"></i><br>מוכן לפאנץ\'? לחץ על הכפתור למטה!';
+      interactiveArea.appendChild(jDiv);
+      break;
+
     default:
       const defaultText = document.createElement('div');
       defaultText.style.color = 'var(--text-muted)';
@@ -196,41 +436,39 @@ function renderInteractiveComponent(type) {
 function checkAllBubblesPopped(grid) {
   const remaining = grid.querySelectorAll('.bubble:not(.popped)').length;
   if(remaining === 0) {
-    triggerSuccess("פצפצת הכל! השעמום שלך ירד ב-12%.");
+    triggerSuccess("פצפצת הכל! השעמום שלך ירד ב-15%.");
   }
 }
 
 // Handle Action Button click
 function handleMainAction() {
   stats.completedCount++;
-  stats.boredLevel = Math.max(0, stats.boredLevel - 15);
+  stats.boredLevel = Math.max(0, stats.boredLevel - 10);
   
   updateStatsDisplay();
 
   // Special interactive responses
   if(currentActivity.type === 'fortune') {
-    const fortunes = [
-      "הגרב שלך תמצא את בן הזוג שלה במכונת הכביסה בדיוק בעוד 3 חודשים.",
-      "צפויה לך הצלחה מסחררת בהסתכלות על התקרה בשעה הקרובה.",
-      "מישהו יגיד לך 'מה נשמע' ואתה תענה 'גם לך' (זה יקרה היום).",
-      "הקפה הבא שלך הולך להיות בדיוק בטמפרטורה המושלמת (בערך).",
-      "אם תסתכל שמאלי עכשיו תראה... אה, בעצם זה רק קיר."
-    ];
     const randomF = fortunes[Math.floor(Math.random() * fortunes.length)];
     interactiveArea.querySelector('.fortune-text').textContent = `🔮 ${randomF}`;
     return;
   }
 
   if(currentActivity.type === 'excuse') {
-    const excuses = [
-      "אני חייב להאכיל את האקווריום שלי בדגים וירטואליים.",
-      "הכוכבים לא מסודרים נכון בשביל שאעשה מטלות כרגע.",
-      "המוח שלי נמצא במצב חיסכון בסוללה עד מחר בבוקר.",
-      "הבטחתי לצמח שלי בסלון שששש... אנחנו מדיטציה.",
-      "אני באמצע לספור את כל הפעימות לב שלי עד שייגמר היום."
-    ];
     const randomE = excuses[Math.floor(Math.random() * excuses.length)];
     interactiveArea.querySelector('.excuse-box').textContent = `«${randomE}»`;
+    return;
+  }
+
+  if(currentActivity.type === 'joke' || currentActivity.type === 'riddle') {
+    const punchlines = [
+      "ועכשיו תצחק בקול רם כדי שהשכנים יחשבו שהשתגעת סופית!",
+      "גאוני, נכון? עכשיו תן לזה לייק דמיוני בראש.",
+      "אם לא צחקת, הבדיחה חייבת לך פיצוי כספי.",
+      "רמת ההומור שלך עלתה ב-3% לפחות."
+    ];
+    const randomP = punchlines[Math.floor(Math.random() * punchlines.length)];
+    interactiveArea.querySelector('.joke-box').innerHTML = `<i class="fa-solid fa-face-grin-squint-tears" style="color:var(--primary); font-size: 1.8rem; margin-bottom: 8px;"></i><br>${randomP}`;
     return;
   }
 
@@ -243,7 +481,6 @@ function triggerSuccess(msg) {
   stats.boredLevel = Math.max(0, stats.boredLevel - 20);
   updateStatsDisplay();
   
-  // Show brief success toast or alert inside title
   const originalTitle = activityTitle.textContent;
   activityTitle.textContent = `🎉 ${msg}`;
   setTimeout(() => {

@@ -135,7 +135,7 @@ header {
 /* Interactive Component Area inside Card */
 .interactive-area {
   width: 100%;
-  min-height: 150px;
+  min-height: 160px;
   background: rgba(0,0,0,0.25);
   border-radius: 12px;
   display: flex;
@@ -251,7 +251,7 @@ header {
 }
 
 .fortune-text {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 500;
   color: var(--accent);
   text-align: center;
@@ -262,10 +262,18 @@ header {
   background: rgba(255,255,255,0.05);
   padding: 15px;
   border-radius: 10px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-style: italic;
   color: #8bc34a;
   width: 100%;
+  text-align: center;
+}
+
+.joke-box {
+  font-size: 1.1rem;
+  color: var(--text-main);
+  text-align: center;
+  animation: fadeIn 0.4s ease;
 }
 
 /* Animations */
@@ -297,4 +305,3 @@ header {
     font-size: 1.5rem;
   }
 }
-=====FILE: app.jschl
